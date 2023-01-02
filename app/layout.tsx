@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
-
+import { Navigation } from './components/navigation/Navigation'
+import { font } from './components/font'
+import '../styles/globals.css'
 export default function RootLayout ({
   children
 }: {
@@ -8,7 +10,10 @@ export default function RootLayout ({
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body className={font.variable}>
+        <Navigation />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,3 +1,7 @@
+import { Hero } from './components/hero/Hero'
+
 export default function Page () {
-  return <h1>Home</h1>
+  return (
+    <Hero />
+  )
 }
