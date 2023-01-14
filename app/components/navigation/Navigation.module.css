@@ -10,38 +10,10 @@
   margin: 2rem 0 0;
 }
 
-.menu {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
   .header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .menu {
-    display: flex;
-    gap: 2rem;
-    font-weight: 600;
-  }
-
-  .active {
-    position: relative;
-    font-weight: 900;
-  }
-
-  .active::after {
-    background: var(--color-primary);
-    border-radius: var(--border-radius);
-    content: '';
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    width: 0.72rem;
-    height: 0.72rem;
-    z-index: -1;
-    transform: translateX(-50%);
   }
 }
