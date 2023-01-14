@@ -1,59 +1,43 @@
-.hero {
-  max-width: 100%;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.hero h1{
-  font-size: 32px;
-  line-height: 1.12;
-  margin: 0 0 0.72rem;
-}
-
-.hero p {
-  font-size: 20px;
-  line-height: 1.2;
-  margin: 0 0 2rem;
-}
-
-.hero h1,
-.hero p {
-  max-width: 580px;
-}
-
 .heroContent {
-  margin: 0 0 2rem;
+  position: relative;
+  height: clamp(24rem, calc(30vw + 30vh), 100vh);
 }
 
-.imageWrapper {
-  margin: 0;
+.title{
+  font-family: var(--font-secondary), sans-serif;
+  font-size: clamp(2rem, calc(6vw + 6vh), calc(10vw + 10vh));
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  max-width: clamp(20rem, calc(28vw + 28vh), calc(40vw + 40vh));
+  line-height: 84%;
+  letter-spacing: -0.035em;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.image {
-  display: block;
-  max-width: 100%;
+.title:last-child {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-negative-white);
+  z-index: 3;
+}
+
+
+.image{
+  position: absolute;
+  z-index: 2;
+  top: -5rem;
+  right: 0;
+
+  max-width: clamp(100px, 47vw, 50vw);
+  width: 100%;
   height: auto;
 }
 
+.banner {
 
-@media screen and (min-width: 1024px) {
-  .container {
-    display: flex;
-    align-items: center;
-    gap: calc(1vw + 1vh);
-  }
-
-  .heroContent {
-    flex-shrink: 0;
-    margin: 0;
-  }
-
-  .hero h1{
-    font-size: 54px;
-    margin: 0 0 1rem;
-  }
-
-  .hero p {
-    font-size: 30px;
-  }
 }

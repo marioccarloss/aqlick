@@ -2,6 +2,7 @@
   --color-primary: #5beeac;
   --color-font: #3C3C3B;
   --color-white: #ffffff;
+  --color-negative-white: #EFEFEF;
   --border-radius: 10px;
   --font-size: 16px;
 }
@@ -15,9 +16,8 @@
 }
 
 body {
-  /* background: linear-gradient(to bottom, rgba(252,248,230,1) 0%, rgba(91,238,172,0.26) 53%, rgba(252,248,230,1) 100%); */
   color: var(--color-font);
-  font-family: var(--font), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-size: var(--font-size);
   font-weight: 300;
   margin: 0;

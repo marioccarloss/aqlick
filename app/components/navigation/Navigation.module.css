@@ -1,19 +1,14 @@
 .header {
   max-width: 100%;
   width: 90%;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto;
+}
+
+.header nav {
+  padding: 1rem 0;
 }
 
 .logo {
   display: block;
-  width: 140px;
-  margin: 2rem 0 0;
-}
-
-@media screen and (min-width: 768px) {
-  .header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  width: clamp(140px, calc(3vw + 3vh), calc(4vw + 4vh));
 }

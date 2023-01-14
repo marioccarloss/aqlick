@@ -1,31 +1,34 @@
-// import Image from 'next/image'
-// import banner from '../../../assets/images/hero.svg'
+import Image from 'next/image'
 import styles from './Hero.module.css'
-import Link from 'next/link'
-import { IconArrow } from '../icons/arrow'
+// import Link from 'next/link'
+import hero from '../../../assets/images/hero.png'
 
 export function Hero () {
   return (
     <main className={styles.hero}>
-      <div className={styles.container}>
-        <article className={styles.heroContent}>
-          <h1>¿Quieres que tus ventas crezcan?</h1>
-          <p>
-            Atrae, aumenta y fideliza a tus clientes a través de los canales conversacionales.
-            <br /><br />
-            Soluciones fáciles para llegar a tus clientes y aumentar tus ventas.
-          </p>
-          <Link href='/contacto' className='btn'>
-            <span>
-              Cuéntanoslo
-              <IconArrow />
-            </span>
-          </Link>
-        </article>
-        {/* <figure className={styles.imageWrapper}>
-          <Image src={banner} className={styles.image} alt='Soluciones en marketing digital' />
-        </figure> */}
-      </div>
+      <article className={styles.heroContent}>
+        <h1 className={styles.title}>
+          ¿Quieres que tus ventas crezcan?
+        </h1>
+        <Image src={hero} className={styles.image} alt='Soluciones en marketing digital' />
+        <span className={styles.title}>
+          ¿Quieres que tus ventas crezcan?
+        </span>
+        {/* <Link
+          href='https://calendly.com/d/g47-6rr-nz7/promociones-y-servicios?month=2023-01'
+          target='_blank'
+          className='btn' rel='noreferrer'
+        >
+          <span>
+            Cuéntanoslo
+          </span>
+        </Link> */}
+      </article>
+      {/*
+      <figure className={styles.imageWrapper}>
+        <Image src={banner} className={styles.image} alt='Soluciones en marketing digital' />
+      </figure>
+      */}
     </main>
   )
 }
