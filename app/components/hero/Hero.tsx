@@ -3,9 +3,12 @@ import styles from './Hero.module.css'
 import Link from 'next/link'
 import hero from '../../../assets/images/hero.png'
 import useHero from '../../hooks/useHero'
+import Video from '../video/Video'
+import useVideo from '../../hooks/useVideo'
 
 export function Hero () {
   const { data } = useHero()
+  const { videoHero } = useVideo()
 
   return (
     <main className={styles.hero}>
@@ -20,6 +23,7 @@ export function Hero () {
             width={826}
             height={825}
           />
+          <Video video={videoHero} />
           <span className={styles.title}>
             {data.hero.title}
           </span>
