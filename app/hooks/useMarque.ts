@@ -3,7 +3,19 @@ import { Marquee } from '../types/Marquee.d'
 export default function useMarquee () {
   const dataHero: Marquee[] = [
     {
-      id: 0,
+      id: 1,
+      content: 'Expertos en marketing digital y promocional'
+    },
+    {
+      id: 2,
+      content: 'Expertos en marketing digital y promocional'
+    },
+    {
+      id: 3,
+      content: 'Expertos en marketing digital y promocional'
+    },
+    {
+      id: 4,
       content: 'Expertos en marketing digital y promocional'
     }
   ]
@@ -30,5 +42,6 @@ export default function useMarquee () {
       content: 'Campañas de escándalo que repetirás por su sencillez y resultados.'
     }
   ]
+
   return { dataHero, dataFooter }
 }

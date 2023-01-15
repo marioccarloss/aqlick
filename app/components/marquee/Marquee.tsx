@@ -1,6 +1,8 @@
-import { Marquee as Marque, Marquees } from '../../types/Marquee.d'
+'use client'
 
-// import MarqueeReact from 'react-fast-marquee'
+import { Marquee as Marque, Marquees } from '../../types/Marquee.d'
+import MarqueeReact from 'react-fast-marquee'
+import styles from './Marquee.module.css'
 
 export default function Marquee (props: Marquees) {
   const { data } = props
@@ -8,8 +10,8 @@ export default function Marquee (props: Marquees) {
   const filteredWithDots = filtered.join(' . ')
 
   return (
-    <div>
+    <MarqueeReact className={styles.marquee} gradient={false} speed={50}>
       {filteredWithDots}
-    </div>
+    </MarqueeReact>
   )
 }

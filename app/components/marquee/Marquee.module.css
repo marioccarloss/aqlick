@@ -1,0 +1,9 @@
+.marquee {
+  border-top: 2px solid var(--color-font);
+  border-bottom: 2px solid var(--color-font);
+  font-family: var(--font-secondary);
+  font-size: clamp(2rem, calc(3.5vw + 3.5vh), 5rem);
+  line-height: 1;
+  margin-right: 1rem;
+  padding: 1.52rem 0 1.32rem 0;
+}

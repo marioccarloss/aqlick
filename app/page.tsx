@@ -3,12 +3,12 @@ import Marquee from './components/marquee/Marquee'
 import useMarquee from './hooks/useMarque'
 
 export default function Page () {
-  const { dataFooter } = useMarquee()
+  const { dataHero } = useMarquee()
 
   return (
     <>
       <Hero />
-      <Marquee data={dataFooter} />
+      <Marquee data={dataHero} />
     </>
   )
 }

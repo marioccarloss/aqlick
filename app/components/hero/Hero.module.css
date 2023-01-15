@@ -1,8 +1,9 @@
 .heroContent {
   position: relative;
-  height: clamp(24rem, calc(28vw + 28vh), 80vh);
+  height: clamp(24rem, calc(28vw + 28vh), 67vh);
   display: flex;
   align-items: flex-end;
+  margin-bottom: clamp(4rem, calc(4vw + 4vh), 6rem);
 }
 
 .title{
