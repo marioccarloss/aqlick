@@ -11,9 +11,7 @@ export default function RootLayout ({
   return (
     <html>
       <head />
-      <body
-        className={`${fontPrimary.variable} ${fontSecondary.variable}`}
-      >
+      <body className={`${fontPrimary.variable} ${fontSecondary.variable}`}>
         <Navigation />
         {children}
       </body>
