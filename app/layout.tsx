@@ -9,7 +9,7 @@ export default function RootLayout ({
   children: ReactNode
 }) {
   return (
-    <html>
+    <html lang='es'>
       <head />
       <body className={`${fontPrimary.variable} ${fontSecondary.variable}`}>
         <Navigation />
