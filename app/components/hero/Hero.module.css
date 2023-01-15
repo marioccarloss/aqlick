@@ -13,6 +13,7 @@
   text-align: center;
   margin: 0 auto;
   max-width: clamp(20rem, calc(28vw + 28vh), calc(40vw + 40vh));
+  width: 100%;
   line-height: 84%;
   letter-spacing: -0.035em;
 
@@ -25,7 +26,7 @@
 
 .title:last-child {
   color: transparent;
-  -webkit-text-stroke: 2px var(--color-negative-white);
+  -webkit-text-stroke: 2px var(--color-white);
   z-index: 3;
 }
 
@@ -34,7 +35,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  width: clamp(150px, calc(13vw + 13vh), 270px);
+  width: clamp(12rem, calc(13vw + 13vh), 270px);
 }
 
 .btnHero span {

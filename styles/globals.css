@@ -60,8 +60,9 @@ a {
 }
 
 .btn span {
+  display: block;
   color: var(--color-font);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   z-index: 2;
 }
