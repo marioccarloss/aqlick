@@ -36,7 +36,7 @@
   }
 
   .image {
-    width: clamp(20rem, calc(20vw + 20vh), calc(22vw + 22vh));
+    width: clamp(20rem, calc(18vw + 18vh), calc(20vw + 20vh));
     height: auto;
   }
 }
