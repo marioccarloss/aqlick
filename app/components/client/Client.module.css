@@ -1,5 +1,4 @@
 .clientSection {
-  border: 1px solid red;
   min-height: clamp(36rem, calc(52vw + 52vh), calc(38vw + 38vh));
 }
 
