@@ -1,6 +1,6 @@
 .heroContent {
   position: relative;
-  height: clamp(24rem, calc(28vw + 28vh), 67vh);
+  height: clamp(24rem, calc(28vw + 28vh), 67.5vh);
   display: flex;
   align-items: flex-end;
   margin-bottom: clamp(4rem, calc(4vw + 4vh), 6rem);
@@ -48,7 +48,7 @@
   top: -6rem;
   right: 0;
 
-  max-width: clamp(100px, 47vw, 50vw);
+  max-width: clamp(100px, 47vw, calc(28vw + 28vh));
   width: 100%;
   height: auto;
 }

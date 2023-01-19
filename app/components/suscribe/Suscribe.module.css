@@ -1,0 +1,39 @@
+.suscribeForm {
+  position: relative;
+  border-radius: 10rem;
+  background: var(--color-bg-light);
+  width: clamp(21rem, calc(20vw + 20vh), calc(24vw + 24vh));
+  padding: 0.62rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suscribeInput {
+  appearance: none;
+  background: none;
+  border: none;
+  border-radius: 10rem;
+  font-family: var(--font-primary);
+  font-size: clamp(0.82rem, calc(1.3vw + 1.3vh), 1.072rem);
+  flex-grow: 1;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.suscribeInput::placeholder {
+  color: var(--color-font);
+}
+
+.suscribeButton {
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: clamp(1rem, calc(1.3vw + 1.3vh), 1.072rem);
+  width: clamp(9rem, calc(8vw + 8vh), 10rem);
+  padding: 1.12rem 2rem;
+  flex-shrink: 0;
+}
+
+.suscribeButton::after {
+  display: none;
+}

@@ -1,19 +1,26 @@
 import Image from 'next/image'
 import styles from './Client.module.css'
+import Suscribe from '../suscribe/Suscribe'
+import useClientSection from '../../hooks/useClientSection'
 
 export default function Client () {
+  const { data } = useClientSection()
+
   return (
-    <article>
-      <div>
-        <h2>Atrae, aumenta y fideliza a tus clientes a través de los canales conversacionales.</h2>
-        <p>Soluciones fáciles para llegar a tus clientes y aumentar tus ventas.</p>
-      </div>
-      <Image
-        src=''
-        className={styles.image} alt=''
-        width={826}
-        height={825}
-      />
-    </article>
+    <div className='container'>
+      <article className={styles.clientSection}>
+        <div className={styles.clientContent}>
+          <h2 className={styles.title}>{data.title}</h2>
+          <p className={styles.paragraph}>{data.paragraph}</p>
+          <Suscribe />
+        </div>
+        <Image
+          src={data.image.src}
+          className={styles.image} alt={data.title}
+          width={340}
+          height={509}
+        />
+      </article>
+    </div>
   )
 }
