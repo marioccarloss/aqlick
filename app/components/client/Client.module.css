@@ -1,6 +1,7 @@
 .clientSection {
   min-height: clamp(36rem, calc(50vw + 50vh), calc(37vw + 37vh));
   padding: 5rem 0;
+  margin-bottom: clamp(8rem, calc(8vw + 8vh), calc(14vw + 14vh));
 }
 
 .title,

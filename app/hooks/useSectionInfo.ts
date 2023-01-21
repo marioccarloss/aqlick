@@ -9,7 +9,8 @@ export default function useSectionInfo () {
     video: '',
     config: {
       color: '#5BEEAC',
-      mobile: true
+      mobile: true,
+      collection: true
     }
   }
 

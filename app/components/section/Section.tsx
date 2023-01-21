@@ -27,25 +27,32 @@ export default function Section (props: Contents) {
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(data.paragraph) }}
           />
         </article>
-        <div
-          className={
-            data.config?.mobile === true
-              ? styles.collectionImage
-              : ''
-          }
-        >
-          <div className={styles.wrapImage}>
-            <div className={styles.maskImage}>
-              <Image
-                src={data.image.src}
-                className={styles.image} alt={data.image.src}
-                width={272}
-                height={550}
-              />
+        {(data.config?.mobile === true && data.config?.collection === true) && (
+          <div className={styles.collectionImage}>
+            <div className={styles.wrapImage}>
+              <div className={styles.maskImage}>
+                <Image
+                  src={data.image.src}
+                  className={styles.image} alt={data.image.src}
+                  width={272}
+                  height={550}
+                />
+              </div>
+              <Phone />
             </div>
-            {data.config?.mobile === true && (<Phone />)}
+            <div className={styles.wrapImage}>
+              <div className={styles.maskImage}>
+                <Image
+                  src={data.image.src}
+                  className={styles.image} alt={data.image.src}
+                  width={272}
+                  height={550}
+                />
+              </div>
+              <Phone />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   )
