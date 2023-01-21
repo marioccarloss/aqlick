@@ -42,15 +42,29 @@ export default function Section (props: Contents) {
             </div>
             ))
           : (
-            <div className={styles.imageWrapper}>
-              <Image
-                src={data.image.src}
-                className={`${styles.image} ${data.config?.outsiteImage === true && 'outsite'}`}
-                alt={data.image.src}
-                width={272}
-                height={550}
-              />
-            </div>
+              data.image.src.length
+                ? (
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={data.image.src}
+                      className={`${styles.image} ${data.config?.outsiteImage === true && 'outsite'}`}
+                      alt={data.image.src}
+                      width={272}
+                      height={550}
+                    />
+                  </div>
+                  )
+                : (
+                  <div className={`${styles.collectionImage} ${styles.videoWrap}`}>
+                    {data.video.map((v, i:number) => (
+                      <div key={data.video[i]} className={styles.wrapImage}>
+                        <div className={styles.maskImage}>
+                          <Video video={data.video[i]} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  )
             )}
       </div>
     </section>

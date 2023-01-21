@@ -71,7 +71,7 @@
 .imageWrapper {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: auto;
 }
 
@@ -80,12 +80,25 @@
   height: auto;
 }
 
+.videoWrap {
+  justify-content: center;
+  width: 100%;
+}
+
+.videoWrap .maskImage {
+  border-radius: 20px;
+}
+
 @media screen and (min-width: 1024px) {
   .sectionContent {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     gap: calc(4vw + 4vh);
+  }
+
+  .paragraph {
+    width: 74%;
   }
 
   .sectionContent > * {
@@ -95,5 +108,10 @@
 
   .collectionImage {
     margin-top: calc(-8vw - 8vh);
+  }
+
+  .videoWrap {
+    margin-top: calc(-4vw - 4vh);
+    margin-bottom: calc(-6vw - 6vh);
   }
 }

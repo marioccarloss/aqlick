@@ -31,10 +31,12 @@ export default function useSectionInfo () {
   }
 
   const dataHow: Content = {
-    title: '¿Cómo<br><span class="text-secondary-white">lo hacemos?</span>',
+    title: '<b style="color: #3C3C3B">¿Cómo</b><br><span class="text-secondary-white">lo hacemos?</span>',
     paragraph: 'Las mejores campañas promocionales a través de WhatsApp. Novedad <b>CRM WSP</b>.<br/><br/>El 91% de los españoles usan WhatsApp como canal conversacional.',
     image: { src: '' },
-    video: [],
+    video: [
+      'https://vimeo.com/791489930'
+    ],
     config: {
       color: '#ff5159',
       orientation: 'right',
