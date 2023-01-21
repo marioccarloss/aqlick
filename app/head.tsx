@@ -1,7 +1,6 @@
 export default function Head () {
   return (
     <>
-      <title />
       <meta content='width=device-width, initial-scale=1' name='viewport' />
       <meta name='theme-color' content='#ffffff' />
       <link rel='icon' href='/favicon.ico' />
