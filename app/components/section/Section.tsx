@@ -14,7 +14,10 @@ export default function Section (props: Contents) {
     >
       <div className={`${styles.sectionContent} container`}>
         <article
-          style={{ order: data.config?.orientation === 'right' ? '-1' : '1' }}
+          style={{
+            order: data.config?.orientation === 'right' ? '1' : '-1',
+            color: data.config?.text ? data.config?.text : '#3C3C3B'
+          }}
         >
           <h2
             className={styles.title}
@@ -25,27 +28,30 @@ export default function Section (props: Contents) {
             dangerouslySetInnerHTML={{ __html: data.paragraph }}
           />
         </article>
-        {(data.config?.mobile === true && data.config?.collection === true) && (
-          <div className={styles.collectionImage}>
-            <div className={styles.wrapImage}>
-              <div className={styles.maskImage}>
-                <Video video={data.video} />
-              </div>
-              <Phone />
+        {(data.config?.collection === true)
+          ? (data.config?.mobile === true && (
+            <div className={styles.collectionImage}>
+              {data.video.map((v, i:number) => (
+                <div key={data.video[i]} className={styles.wrapImage}>
+                  <div className={styles.maskImage}>
+                    <Video video={data.video[i]} />
+                  </div>
+                  <Phone />
+                </div>
+              ))}
             </div>
-            <div className={styles.wrapImage}>
-              <div className={styles.maskImage}>
-                <Image
-                  src={data.image.src}
-                  className={styles.image} alt={data.image.src}
-                  width={272}
-                  height={550}
-                />
-              </div>
-              <Phone />
+            ))
+          : (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={data.image.src}
+                className={`${styles.image} ${data.config?.outsiteImage === true && 'outsite'}`}
+                alt={data.image.src}
+                width={272}
+                height={550}
+              />
             </div>
-          </div>
-        )}
+            )}
       </div>
     </section>
   )

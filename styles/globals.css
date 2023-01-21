@@ -81,10 +81,19 @@ a {
   -webkit-text-stroke: 1px var(--color-black);
 }
 
+.text-secondary-white {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-white);
+}
+
 
 .container .video {
   width: calc(14vw + 14vh) !important;
   height: calc(24vw + 24vh) !important;
   transform: translate(-50%, -50%);
   left: 50%;
+}
+
+.outsite {
+  margin-top: calc(-4vw - 4vh);
 }

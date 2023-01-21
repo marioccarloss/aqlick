@@ -7,7 +7,11 @@ import Section from './components/section/Section'
 
 export default function Page () {
   const { dataHero } = useMarquee()
-  const { dataCatchment } = useSectionInfo()
+  const {
+    dataCatchment,
+    dataCompetence,
+    dataHow
+  } = useSectionInfo()
 
   return (
     <>
@@ -15,6 +19,8 @@ export default function Page () {
       <Marquee data={dataHero} />
       <Client />
       <Section data={dataCatchment} />
+      <Section data={dataCompetence} />
+      <Section data={dataHow} />
     </>
   )
 }

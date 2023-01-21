@@ -1,15 +1,6 @@
 .sectionWrapper {
   position: relative;
-}
-
-.sectionBackground {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: calc(2.25vw + 2.25vh);
-  left: 0;
-  right: 0;
-  z-index: -1;
+  margin-bottom: clamp(12rem, calc(14vw + 14vh), calc(18vw + 18vh));
 }
 
 .title {
@@ -24,12 +15,11 @@
 .paragraph {
   font-size: clamp(1.25rem, calc(2vw + 2vh), 1.8rem);
   line-height: 1.32;
-  margin: 0 0 calc(1.2vw + 1.2vh);
+  margin: 0 0 calc(3vw + 3vh);
 }
 
 .collectionImage {
   display: flex;
-  margin-top: clamp(-5rem, calc(-6vw - 6vh), calc(-8vw - 8vh));
   padding-bottom: clamp(2rem, calc(2vw + 2vh), calc(3vw + 3vh));
 }
 
@@ -78,14 +68,32 @@
   transform: translate(-40%, -40%) rotate(9deg);
 }
 
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: auto;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 1024px) {
   .sectionContent {
     display: flex;
+    align-items: start;
     justify-content: space-between;
     gap: calc(4vw + 4vh);
   }
 
   .sectionContent > * {
     max-width: 50%;
+    height: 100%;
+  }
+
+  .collectionImage {
+    margin-top: calc(-8vw - 8vh);
   }
 }
