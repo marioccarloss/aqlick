@@ -23,7 +23,7 @@ export default function Video (props: VideoEmbed) {
         <ReactPlayer
           key={video}
           url={video}
-          className={styles.videoHero}
+          className={`${styles.videoHero} video`}
           playing
           controls={false}
           loop

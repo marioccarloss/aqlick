@@ -80,3 +80,11 @@ a {
   color: transparent;
   -webkit-text-stroke: 1px var(--color-black);
 }
+
+
+.container .video {
+  width: calc(14vw + 14vh) !important;
+  height: calc(24vw + 24vh) !important;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}

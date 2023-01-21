@@ -48,7 +48,8 @@
 
 .collectionImage .maskImage,
 .collectionImage .wrapImage img,
-.collectionImage .wrapImage svg {
+.collectionImage .wrapImage svg,
+.collectionImage .wrapImage video {
   position: absolute;
   top: 50%;
   left: 50%;
