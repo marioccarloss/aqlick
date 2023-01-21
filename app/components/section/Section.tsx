@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import { Contents } from '../../types/Content'
 import Phone from '../icons/phone'
