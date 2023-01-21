@@ -9,8 +9,6 @@ export default function Page () {
   const { dataHero } = useMarquee()
   const { dataCatchment } = useSectionInfo()
 
-  console.log(dataCatchment)
-
   return (
     <>
       <Hero />
