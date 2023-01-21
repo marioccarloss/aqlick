@@ -4,7 +4,7 @@ export type Content = {
   image: {
     src: string
   },
-  video?: string
+  video: string
   config?: {
     align?: string,
     color?: string,

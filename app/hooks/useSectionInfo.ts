@@ -6,7 +6,7 @@ export default function useSectionInfo () {
     title: 'Consigue captar<br><span class="text-secondary">más clientes</span>',
     paragraph: 'Diseñamos estrategias y te ayudamos a implantar acciones promocionales ajustadas a tus objetivos de negocio.<br><br>Acciones <b>Customer Centric</b>, encaminadas a atraer a un mayor número de consumidores.',
     image: imgCatchment,
-    video: '',
+    video: 'https://vimeo.com/791421205',
     config: {
       color: '#5BEEAC',
       mobile: true,
