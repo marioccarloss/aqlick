@@ -1,6 +1,7 @@
 import { Content } from '../types/Content'
 import imgCatchment from '../../assets/images/catchment.jpg'
 import imgCompetence from '../../assets/images/competence.png'
+import imgReward from '../../assets/images/reward.png'
 
 export default function useSectionInfo () {
   const dataCatchment: Content = {
@@ -44,9 +45,21 @@ export default function useSectionInfo () {
     }
   }
 
+  const dataReward: Content = {
+    title: 'Recompensa<br><span class="text-secondary">a tus clientes</span>',
+    paragraph: 'Nuestro <b>catálogo de regalos</b> con más de 6 categorías harán despegar tus ventas.<br/><br/>Los regalos aspiracionales son un gran incentivo para tus clientes.',
+    image: imgReward,
+    video: [],
+    config: {
+      color: '#fff80d',
+      outsiteImage: true
+    }
+  }
+
   return {
     dataCatchment,
     dataCompetence,
-    dataHow
+    dataHow,
+    dataReward
   }
 }

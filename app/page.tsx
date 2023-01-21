@@ -10,7 +10,8 @@ export default function Page () {
   const {
     dataCatchment,
     dataCompetence,
-    dataHow
+    dataHow,
+    dataReward
   } = useSectionInfo()
 
   return (
@@ -21,6 +22,7 @@ export default function Page () {
       <Section data={dataCatchment} />
       <Section data={dataCompetence} />
       <Section data={dataHow} />
+      <Section data={dataReward} />
     </>
   )
 }
