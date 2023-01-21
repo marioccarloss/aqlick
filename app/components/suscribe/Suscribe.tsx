@@ -23,6 +23,7 @@ export default function Suscribe () {
       <input
         type='email'
         value={message}
+        placeholder='Correo electrónico'
         onChange={(e) => setMessage(e.target.value)}
         className={styles.suscribeInput}
       />

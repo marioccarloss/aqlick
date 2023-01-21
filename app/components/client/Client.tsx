@@ -7,7 +7,7 @@ export default function Client () {
   const { data } = useClientSection()
 
   return (
-    <div className='container'>
+    <section className='container'>
       <article className={styles.clientSection}>
         <div className={styles.clientContent}>
           <h2 className={styles.title}>{data.title}</h2>
@@ -21,6 +21,6 @@ export default function Client () {
           height={509}
         />
       </article>
-    </div>
+    </section>
   )
 }

@@ -2,6 +2,7 @@
   --color-primary: #5beeac;
   --color-font: #3C3C3B;
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-negative-white: #EFEFEF;
   --color-bg-light: #F4F4F4;
   --border-radius: 10px;
@@ -73,4 +74,9 @@ a {
   max-width: 100%;
   width: 90%;
   margin: 0 auto;
+}
+
+.text-secondary {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-black);
 }

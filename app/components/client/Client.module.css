@@ -5,7 +5,7 @@
 
 .title,
 .paragraph {
-  font-size: clamp(1.25rem, calc(1.5vw + 1.5vh), 1.75rem);
+  font-size: clamp(1.25rem, calc(2vw + 2vh), 2rem);
   line-height: 1.32;
   margin: 0 0 calc(1.2vw + 1.2vh);
 }

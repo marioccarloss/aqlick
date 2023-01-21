@@ -13,6 +13,7 @@
   background: none;
   border: none;
   border-radius: 10rem;
+  color: var(--color-font);
   font-family: var(--font-primary);
   font-size: clamp(0.82rem, calc(1.3vw + 1.3vh), 1.072rem);
   flex-grow: 1;
@@ -21,7 +22,7 @@
 }
 
 .suscribeInput::placeholder {
-  color: var(--color-font);
+  color: #8D8D8D;
 }
 
 .suscribeButton {
