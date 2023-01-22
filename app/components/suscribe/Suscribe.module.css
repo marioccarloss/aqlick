@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 10rem;
   background: var(--color-bg-light);
-  width: clamp(21rem, calc(23vw + 23vh), calc(24vw + 24vh));
+  width: clamp(21rem, calc(22vw + 22vh), calc(22vw + 22vh));
   padding: 0.62rem;
   display: flex;
   justify-content: space-between;
