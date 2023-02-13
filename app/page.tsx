@@ -4,6 +4,7 @@ import useMarquee from './hooks/useMarque'
 import Client from './components/client/Client'
 import useSectionInfo from './hooks/useSectionInfo'
 import Section from './components/section/Section'
+import Service from './components/service/Service'
 
 export default function Page () {
   const { dataHero } = useMarquee()
@@ -23,6 +24,7 @@ export default function Page () {
       <Section data={dataCompetence} />
       <Section data={dataHow} />
       <Section data={dataReward} />
+      <Service />
     </>
   )
 }
