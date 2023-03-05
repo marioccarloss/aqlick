@@ -1,3 +1,7 @@
+.servicesTitle {
+  width: 100%;
+}
+
 .titlePrincipal {
   font-family: var(--font-secondary);
   font-size: clamp(2rem, calc(3.5vw + 3.5vh), 5rem);
@@ -10,9 +14,11 @@
 
 .services {
   display: grid;
-  grid-gap: calc(4vw + 4vh);
+  grid-gap: calc(1vw + 1vh);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-bottom: calc(6vw + 6vh);
+  padding: 6rem 0;
+  overflow: hidden;
 }
 
 .service {

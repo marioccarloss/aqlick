@@ -6,7 +6,7 @@ export default function Service () {
   const { data } = useService()
 
   return (
-    <>
+    <section className={styles.servicesTitle}>
       <h2 className={styles.titlePrincipal} dangerouslySetInnerHTML={{ __html: data.title }} />
       <div className={styles.services}>
         {data.info.map((item: Type) => (
@@ -21,6 +21,6 @@ export default function Service () {
           </div>
         ))}
       </div>
-    </>
+    </section>
   )
 }
