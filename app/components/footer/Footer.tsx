@@ -25,7 +25,7 @@ export default function Footer () {
           {`© AQlick Digital Marketing Solutions ${new Date().getFullYear()}`}
         </span>
         <div>
-          <a href='https://www.instagram.com/aqlick_dms/facebo' target='_blank' rel='noreferrer'>Instagram</a>
+          <a href='https://www.instagram.com/aqlick_dms/' target='_blank' rel='noreferrer'>Instagram</a>
           <a href='https://www.facebook.com/AqlickDigitalMarketing/' target='_blank' rel='noreferrer'>Facebook</a>
           <a href='https://www.linkedin.com/company/aqlick-digital-marketing-solutions/' target='_blank' rel='noreferrer'>Linkedin</a>
         </div>
