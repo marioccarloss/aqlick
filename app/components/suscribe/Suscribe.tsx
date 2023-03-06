@@ -9,6 +9,7 @@ type FormValues = {
 
 export default function Suscribe () {
   const [values, setValues] = useState<FormValues>({ email: '' })
+  const [messageSend, setMessageSend] = useState<boolean>(false)
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target
@@ -20,7 +21,8 @@ export default function Suscribe () {
     const res = await fetch('/api/subscribe', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
       },
       body: JSON.stringify(values)
     })
@@ -28,27 +30,33 @@ export default function Suscribe () {
     if (data.error) {
       console.log(data.error)
     } else {
-      console.log('Suscripción exitosa')
+      setMessageSend(true)
     }
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.suscribeForm}>
-      <input
-        placeholder='Correo electrónico'
-        type='email'
-        name='email'
-        value={values.email}
-        onChange={handleChange}
-        required
-        className={styles.suscribeInput}
-      />
-      <button
-        type='submit'
-        className={`btn ${styles.suscribeButton}`}
-      >
-        Suscríbete
-      </button>
-    </form>
+    <>
+      {!messageSend
+        ? (
+          <form onSubmit={handleSubmit} className={styles.suscribeForm}>
+            <input
+              placeholder='Correo electrónico'
+              type='email'
+              name='email'
+              value={values.email}
+              onChange={handleChange}
+              required
+              className={styles.suscribeInput}
+            />
+            <button
+              type='submit'
+              className={`btn ${styles.suscribeButton}`}
+            >
+              Suscríbete
+            </button>
+          </form>
+          )
+        : ('')}
+    </>
   )
 }
