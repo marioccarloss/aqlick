@@ -31,6 +31,10 @@ export default function Suscribe () {
       console.log(data.error)
     } else {
       setMessageSend(true)
+
+      setTimeout(() => {
+        setMessageSend(false)
+      }, 5000)
     }
   }
 
@@ -56,7 +60,7 @@ export default function Suscribe () {
             </button>
           </form>
           )
-        : ('')}
+        : (<p className={styles.suscribeMessage}>¡Gracias por suscribirte!</p>)}
     </>
   )
 }

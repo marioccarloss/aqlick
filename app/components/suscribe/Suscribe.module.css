@@ -8,6 +8,17 @@
   justify-content: space-between;
 }
 
+.suscribeMessage {
+  background-color: #e6fffa;
+  color: #244e53;
+  border-radius: 1rem;
+  font-size: clamp(0.82rem, calc(1.3vw + 1.3vh), 1.072rem);
+  font-weight: 600;
+  padding: 2rem 1rem;
+  text-align: center;
+  width: clamp(21rem, calc(22vw + 22vh), calc(22vw + 22vh));
+}
+
 .suscribeInput {
   appearance: none;
   background: none;
