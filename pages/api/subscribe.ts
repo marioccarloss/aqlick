@@ -19,7 +19,8 @@ export default async function handler (
     to: email,
     from: 'marioccarloss@outlook.com',
     subject: '¡Gracias por suscribirte!',
-    text: '¡Bienvenido/a! Gracias por suscribirte a nuestro boletín de noticias.'
+    text: '¡Bienvenido/a! Gracias por suscribirte a nuestro boletín de noticias.',
+    html: '<strong>and easy to do anywhere, even with Node.js</strong>'
   }
 
   try {
