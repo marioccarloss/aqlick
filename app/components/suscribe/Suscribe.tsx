@@ -1,35 +1,50 @@
 'use client'
 
-import { useFormspark } from '@formspark/use-formspark'
-import { useState, MouseEvent } from 'react'
+import { useState, ChangeEvent, FormEvent } from 'react'
 import styles from './Suscribe.module.css'
 
+type FormValues = {
+  email: string,
+}
+
 export default function Suscribe () {
-  const FORMSPARK_FORM_ID = 'your-form-id'
-  const [submit, submitting] = useFormspark({
-    formId: FORMSPARK_FORM_ID
-  })
+  const [values, setValues] = useState<FormValues>({ email: '' })
 
-  const [message, setMessage] = useState<string>('')
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target
+    setValues({ ...values, [name]: value })
+  }
 
-  const onSubmit = async (event: MouseEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    await submit({ message })
-    alert('Form submitted')
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(values)
+    })
+    const data = await res.json()
+    if (data.error) {
+      console.log(data.error)
+    } else {
+      console.log('Suscripción exitosa')
+    }
   }
 
   return (
-    <form onSubmit={onSubmit} className={styles.suscribeForm}>
+    <form onSubmit={handleSubmit} className={styles.suscribeForm}>
       <input
-        type='email'
-        value={message}
         placeholder='Correo electrónico'
-        onChange={(e) => setMessage(e.target.value)}
+        type='email'
+        name='email'
+        value={values.email}
+        onChange={handleChange}
+        required
         className={styles.suscribeInput}
       />
       <button
         type='submit'
-        disabled={submitting}
         className={`btn ${styles.suscribeButton}`}
       >
         Suscríbete
