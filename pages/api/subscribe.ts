@@ -23,6 +23,8 @@ export default async function handler (
     html: '<strong>and easy to do anywhere, even with Node.js</strong>'
   }
 
+  console.log(sgMail)
+
   try {
     await sgMail.send(msg)
     res.status(200).json({ message: 'Correo enviado con éxito' })
