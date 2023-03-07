@@ -101,13 +101,15 @@ a {
 }
 
 .hero__video,
-.wrap__video {
+.wrap__video,
+.marque {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
   .hero__video,
-  .wrap__video {
+  .wrap__video,
+  .marque {
     display: block;
   }
 }

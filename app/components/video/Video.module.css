@@ -26,6 +26,7 @@
   width: 100vw;
   height: calc(33vw + 33vh);
   overflow: hidden;
+  display: none;
 }
 
 .ContainerVideo > div,
@@ -43,4 +44,11 @@
   min-width: 120%;
   transform: translate(-50%,-50%);
   object-fit: cover;
+}
+
+
+@media screen and (min-width: 768px) {
+  .ContainerVideo {
+    display: block;
+  }
 }

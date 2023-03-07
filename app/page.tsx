@@ -32,7 +32,9 @@ export default function Page () {
       <Marquee data={dataFooter} />
       <Funded data={dataFunded} />
       <VideoFull />
-      <Marquee data={dataFooter} />
+      <div className='marque'>
+        <Marquee data={dataFooter} />
+      </div>
     </>
   )
 }
