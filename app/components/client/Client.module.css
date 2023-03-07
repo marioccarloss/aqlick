@@ -4,6 +4,10 @@
   margin-bottom: clamp(8rem, calc(8vw + 8vh), calc(14vw + 14vh));
 }
 
+.clientContent {
+  margin-bottom: 2rem;
+}
+
 .title,
 .paragraph {
   font-size: clamp(1.25rem, calc(2vw + 2vh), 2rem);
@@ -34,6 +38,10 @@
 
   .clientContent {
     width: clamp(10rem, calc(28vw + 28vh), calc(30vw + 30vh));
+  }
+
+  .clientContent {
+    margin-bottom: 0;
   }
 
   .image {

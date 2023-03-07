@@ -12,7 +12,7 @@ export function Hero () {
 
   return (
     <main className={styles.hero}>
-      <article className={styles.heroContent}>
+      <article className={`${styles.heroContent} hero`}>
         <div>
           <h1 className={styles.title}>
             {data.hero.title}
@@ -23,7 +23,9 @@ export function Hero () {
             width={826}
             height={825}
           />
-          <Video video={videoHero} />
+          <div className='hero__video'>
+            <Video video={videoHero} />
+          </div>
           <span className={styles.title}>
             {data.hero.title}
           </span>

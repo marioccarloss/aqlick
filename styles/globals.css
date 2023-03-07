@@ -99,3 +99,15 @@ a {
 .outsite {
   margin-top: calc(-4vw - 4vh);
 }
+
+.hero__video,
+.wrap__video {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__video,
+  .wrap__video {
+    display: block;
+  }
+}

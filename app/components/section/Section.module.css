@@ -1,6 +1,6 @@
 .sectionWrapper {
   position: relative;
-  margin-bottom: clamp(12rem, calc(14vw + 14vh), calc(18vw + 18vh));
+  margin-bottom: clamp(10rem, calc(14vw + 14vh), calc(18vw + 18vh));
 }
 
 .title {
@@ -10,6 +10,7 @@
   text-transform: uppercase;
   line-height: 84%;
   margin: calc(-2.42vw - 2.42vh) 0 clamp(2rem, calc(1.5vw + 1.5vh), calc(2vw + 2vh));
+  padding-top: 3rem;
 }
 
 .paragraph {
@@ -95,6 +96,10 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: calc(4vw + 4vh);
+  }
+
+  .title {
+    padding-top: 0;
   }
 
   .paragraph {

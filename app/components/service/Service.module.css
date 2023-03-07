@@ -17,7 +17,6 @@
   grid-gap: calc(1vw + 1vh);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin-bottom: calc(6vw + 6vh);
-  padding: 6rem 0;
   overflow: hidden;
 }
 
@@ -29,7 +28,7 @@
   position: relative;
   display: grid;
   place-content: center;
-  width: calc(16vw + 16vh);
+  width: 90%;
   min-height: calc(16vw + 16vh);
   margin: 0 auto;
 }
@@ -51,8 +50,13 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .services {
+    padding: 6rem 0;
+  }
+
   .service {
     background-color: transparent;
+    width: calc(16vw + 16vh);
   }
 
   .service::before {

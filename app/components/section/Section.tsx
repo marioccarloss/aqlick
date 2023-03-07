@@ -32,7 +32,7 @@ export default function Section (props: Contents) {
           ? (data.config?.mobile === true && (
             <div className={styles.collectionImage}>
               {data.video.map((v, i:number) => (
-                <div key={data.video[i]} className={styles.wrapImage}>
+                <div key={data.video[i]} className={`${styles.wrapImage} wrap__video`}>
                   <div className={styles.maskImage}>
                     <Video video={data.video[i]} />
                   </div>
@@ -57,7 +57,7 @@ export default function Section (props: Contents) {
                 : (
                   <div className={`${styles.collectionImage} ${styles.videoWrap}`}>
                     {data.video.map((v, i:number) => (
-                      <div key={data.video[i]} className={styles.wrapImage}>
+                      <div key={data.video[i]} className={`${styles.wrapImage} wrap__video`}>
                         <div className={styles.maskImage}>
                           <Video video={data.video[i]} />
                         </div>

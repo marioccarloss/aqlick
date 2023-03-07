@@ -1,6 +1,7 @@
 .footer {
   background: var(--color-font);
-  padding: 0 calc(3vw + 3vh);
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .footer a,
@@ -10,6 +11,10 @@
 
 .footerTop {
   padding: calc(4vw + 4vh) 0 !important;
+}
+
+.containerFooter > div {
+  margin-bottom: 2rem;
 }
 
 .containerFooter > div > svg {
@@ -37,17 +42,50 @@
   gap: 2rem;
 }
 
+.footerBottom {
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBottom > span{
+  order: 1;
+  padding-bottom: 2rem;
+}
+
+.footerBottom > div {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+
 @media screen and (min-width: 768px) {
+  .footer {
+    padding: 0 calc(3vw + 3vh);
+    text-align: left;
+  }
+
   .containerFooter {
     display: flex;
     align-items: center;
-    padding: 0 20px;
     gap: 3rem;
+  }
+
+  .containerFooter > div {
+    margin-bottom: 0;
+  }
+
+  .footerTop a:hover {
+    text-decoration: underline;
   }
 
   .footerBottom {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
     padding-bottom: 1rem;
   }
 
@@ -59,5 +97,14 @@
   .footerBottom a {
     display: block;
     padding: 1rem;
+  }
+
+  .footerBottom a:hover {
+    text-decoration: underline;
+  }
+
+  .footerBottom > span{
+    order: -1;
+    padding-bottom: 0;
   }
 }
